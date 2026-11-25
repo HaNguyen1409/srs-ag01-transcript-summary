@@ -1,0 +1,29 @@
+{
+  "$schema_version": 1,
+  "name": "srs-ag01-transcript-summary",
+  "version": "2.0.0",
+  "node_id": "AG-01",
+  "kind": "agent",
+  "summary": "Agent Node AG-01 (Bước B3 SOP viết SRS): phiên âm ghi âm/tài liệu họp & demo thành bản phiên âm đầy đủ + tóm tắt có cấu trúc (lớp SỰ KIỆN), kèm phân tích điểm nghiệp vụ gắn nhãn AI_PROPOSAL. Chấm điểm nguyên, Code Node DET-05 tính trọng số.",
+  "repository": "https://github.com/HaNguyen1409/srs-ag01-transcript-summary",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": "TL-01",
+    "sop_steps": [
+      {
+        "step": "3",
+        "title": "Phiên âm & tổng hợp nội dung",
+        "type": "Agent",
+        "receives_from": "B2",
+        "sends_to": "B4; BA"
+      }
+    ]
+  },
+  "upstream": {},
+  "downstream": [
+    "srs-ag02-requirement-extraction"
+  ],
+  "orchestrates": {},
+  "runtime": null
+}
